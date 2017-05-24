@@ -1,0 +1,155 @@
+/*
+*  Marco UdeApps
+*  Authors
+*  Daniel Correa Arango
+*  Santiago Gómez Giraldo
+*  León David Osorio Tobón
+*  Copyright University of Antioquia 2017- All Rights Reserved
+*/
+
+/*Font type for starter legend*/
+@font-face{
+    font-family: Starter-Font;
+    src: url("../fonts/CabinSketch-Bold.ttf");
+}
+
+/*Settings for all templates*/
+.bar-green-udea{
+    background: #0A351C;
+    color:white;
+}
+
+img.navbar-icon{
+    max-height: 30px
+}
+
+#bar-title, .content-main, .intro-pi{
+    display: none;
+}
+
+.pane{
+    background-color: #0A351C;
+}
+
+/*Settings for template notifications*/
+h3.error-not-notifications{
+    color: #bd1313;
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.content-notification-pi{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+div.content-notification-pi h4{
+    color: #6C9A06
+}
+
+div.content-notification-pi hr{
+    border-color: #0A351C;
+}
+
+button#remove-notifications{
+    background-color: #6C9A06;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/*Settings for template main*/
+.icon-action-apps{
+    margin-top: 10px;
+    display: inline-grid;
+    text-align: center;
+    font-weight: bold;
+}
+
+.icon-action-apps img{
+    max-width: 60px;
+    max-height: 60px;
+}
+
+div#notification-alert{
+    width: 20px;
+    height: 20px;
+    background-color: #bd1313;
+    border-radius: 10px;
+    float: right;
+    position: relative;
+    top: 16px;
+    left: 60px;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    display: none;
+}
+
+/*Settings for template about*/
+div#credits-pi-container{
+    background-image: url(../img/main-logo-u.PNG);  
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div#credits-pi{
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.75);
+}
+
+/*Settings for template starter*/
+.button-green-udea{
+    background-color: #0A351C;
+    color:white;
+}
+
+.button-green-udea:hover, .button-green-udea:focus, .button-green-udea:active{
+    background-color: #6C9A06;
+    color: white;
+}
+
+span#powered-by-pi{
+    display: none;
+    color: white;
+    font-size: 2vmin;
+    bottom: 10px;
+    position: absolute;
+}
+
+span#powered-by-pi a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+span#powered-by-pi a:active, span#powered-by-pi a:hover, span#powered-by-pi a:focus {
+    color: #6C9A06;
+}
+
+.intro-pi h1{
+    font-family: "Starter-Font", sans-serif;
+    color: white;
+    font-size: 20vmin;
+}
+
+.scroll{
+    height: 100%;
+}
+
+#login-icon-pi {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 90px;
+}
+
+.icon-login-color-pi {
+    color:#6c9a06;
+}

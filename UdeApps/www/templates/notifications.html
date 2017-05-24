@@ -1,0 +1,27 @@
+<!--
+- Marco UdeApps
+- Authors
+- Daniel Correa Arango
+- Santiago Gómez Giraldo
+- León David Osorio Tobón
+- Copyright University of Antioquia 2017- All Rights Reserved
+-->
+<ion-view title="Notificaciones">
+    <ion-nav-buttons side="left">
+        <img class="navbar-icon" ng-click="back()" src="img/left-arrow-icon.png">
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <img ng-click="logout()" class="navbar-icon" src="img/power-off-icon.png">
+    </ion-nav-buttons>
+    <ion-content>
+        <div ng-repeat="notification in notifications" class="content-notification-pi">
+            <h4>{{notification.title}}</h4>
+            <span>{{notification.body}}</span>
+            <hr>
+        </div>
+        <h3 class="error-not-notifications">{{notNotificationsMessage}}</h3>
+        <center>
+            <button id="remove-notifications" ng-click="clearNotifications()">Borrar notificaciones</button>
+        </center>
+    </ion-content>
+</ion-view>

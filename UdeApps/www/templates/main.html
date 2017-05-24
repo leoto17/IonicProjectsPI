@@ -1,0 +1,33 @@
+<!--
+- Marco UdeApps
+- Authors
+- Daniel Correa Arango
+- Santiago Gómez Giraldo
+- León David Osorio Tobón
+- Copyright University of Antioquia 2017- All Rights Reserved
+-->
+<ion-view title="Menú Principal">
+   <ion-nav-buttons side="right">
+        <img ng-click="logout()" class="navbar-icon" src="img/power-off-icon.png">
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="content-main-pi">
+            <center>
+                <div class="icon-action-apps" ng-click="seeNotifications()">
+                    <div id="notification-alert"></div>
+                    <center>
+                        <img src="img/notifications-icon-pi.png">
+                    </center>
+                    <span>Notificaciones</span>
+                </div>
+                <br>
+                <div class="icon-action-apps" ng-click="seeAbout()">
+                    <center>
+                        <img src="img/about-icon-pi.png">
+                    </center>
+                    <span>Acerca de</span>
+                </div>
+            </center>
+        </div>
+    </ion-content>
+</ion-view>

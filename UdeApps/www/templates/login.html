@@ -1,0 +1,26 @@
+<!--
+- Marco UdeApps
+- Authors
+- Daniel Correa Arango
+- Santiago Gómez Giraldo
+- León David Osorio Tobón
+- Copyright University of Antioquia 2017- All Rights Reserved
+-->
+<ion-view title="Autenticación">
+    <ion-content>
+      <center><img id="login-icon-pi" src="img/login-icon-pi.png"></center>
+       <form method="post" ng-submit="login(params)">
+            <div class="list">
+              <label class="item item-input item-floating-label">
+                <span class="input-label"><i class="icon-login-color-pi icon placeholder-icon ion-person"></i><font color="#6c9a06"> Usuario</font></span>
+                <input required ng-model="params.username" type="text" placeholder="Usuario">
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label"><i class="icon-login-color-pi icon placeholder-icon ion-android-lock"></i><font color="#6c9a06"> Contraseña</font></span>
+                <input required ng-model="params.password" type="password" placeholder="Contraseña">
+              </label>
+            </div>
+            <center><button type="submit" class="button button-green-udea">Ingresar</button></center>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "105669883538",
+    "firebase_url": "https://udeapps-9fd5e.firebaseio.com",
+    "project_id": "udeapps-9fd5e",
+    "storage_bucket": "udeapps-9fd5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105669883538:android:2391dd23136f6813",
+        "android_client_info": {
+          "package_name": "co.edu.udea.udeapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105669883538-gg0nik5f2cpujhjo2g61q1oa5vtonui3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfy8Kvrd1lPRklgvTjFQI3TCGqxFB2-7g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
