@@ -221,6 +221,7 @@ udeapp.controller("NotificationsCtrl", function($scope, $location, $ionicHistory
         $('button#remove-notifications').hide();
         localStorage.clear();
         localStorage.setItem('counter','0');
+        localStorage.setItem('logued','true');
     }
     
     $scope.back = function(){
