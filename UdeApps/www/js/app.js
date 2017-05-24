@@ -10,7 +10,6 @@
 var udeapp = angular.module("udeapps",["ionic","ngCordova"]);
 
 udeapp.run(function($ionicPlatform) {
-    
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
 
@@ -74,7 +73,7 @@ udeapp.config(function($stateProvider, $urlRouterProvider) {
 /*Controller views section*/
 
 /*Login Controller*/
-udeapp.controller("LoginCtrl", function($scope, $ionicHistory, $location) {
+udeapp.controller("LoginCtrl", function($scope, $ionicHistory, $location, $ionicPopup) {
     if(localStorage.getItem('logued')!=null && localStorage.getItem('logued')=='true'){
         $location.url("/main");
     }else{
@@ -92,13 +91,16 @@ udeapp.controller("LoginCtrl", function($scope, $ionicHistory, $location) {
             $location.url("/main");
         }
         else{
-            alert('Los datos son incorrectos');
+            var alertPopup = $ionicPopup.alert({
+                title: 'Error',
+                template: 'Los datos ingresados son incorrectos'
+            });
         }
 	};
 });
 
 /*Main Controller*/
-udeapp.controller("MainCtrl", function($scope, $ionicHistory, $location, $timeout) {
+udeapp.controller("MainCtrl", function($scope, $ionicHistory, $location, $timeout, $ionicPopup) {
     if(localStorage.getItem('logued')==null || localStorage.getItem('logued')!='true'){
         $location.url("/login");
     }
@@ -147,8 +149,18 @@ udeapp.controller("MainCtrl", function($scope, $ionicHistory, $location, $timeou
     };
     
     $scope.logout = function(){
-        localStorage.setItem('logued','false');
-        $location.url("/login");
+        if (true) {
+          $ionicPopup.confirm({
+            title: 'Cerrar Sesión',
+            template: 'Está seguro que desea cerrar sesión y cerrar la aplicación?'
+          }).then(function(res) {
+            if (res) {
+                $ionicHistory.clearHistory();
+                localStorage.setItem('logued','false');
+                ionic.Platform.exitApp();
+            }
+          })
+        } 
     }
 });
 
@@ -176,7 +188,7 @@ udeapp.controller("StarterCtrl", function($scope, $location, $timeout) {
 });
 
 /*Notifications Controller*/
-udeapp.controller("NotificationsCtrl", function($scope, $location) {
+udeapp.controller("NotificationsCtrl", function($scope, $location, $ionicHistory, $ionicPopup) {
     if(localStorage.getItem('logued')==null || localStorage.getItem('logued')!='true'){
         $location.url("/login");
     }
@@ -215,13 +227,23 @@ udeapp.controller("NotificationsCtrl", function($scope, $location) {
     }
     
     $scope.logout = function(){
-        localStorage.setItem('logued','false');
-        $location.url("/login");
+        if (true) {
+          $ionicPopup.confirm({
+            title: 'Cerrar Sesión',
+            template: 'Está seguro que desea cerrar sesión?'
+          }).then(function(res) {
+            if (res) {
+                $ionicHistory.clearHistory();
+                localStorage.setItem('logued','false');
+                ionic.Platform.exitApp();
+            }
+          })
+        } 
     }
 });
 
 /*About Controller*/
-udeapp.controller("AboutCtrl", function($scope, $location) {
+udeapp.controller("AboutCtrl", function($scope, $location, $ionicHistory, $ionicPopup) {
     if(localStorage.getItem('logued')==null || localStorage.getItem('logued')!='true'){
         $location.url("/login");
     }
@@ -236,7 +258,17 @@ udeapp.controller("AboutCtrl", function($scope, $location) {
     }
     
     $scope.logout = function(){
-        localStorage.setItem('logued','false');
-        $location.url("/login");
+        if (true) {
+          $ionicPopup.confirm({
+            title: 'Cerrar Sesión',
+            template: 'Está seguro que desea cerrar sesión?'
+          }).then(function(res) {
+            if (res) {
+                $ionicHistory.clearHistory();
+                localStorage.setItem('logued','false');
+                ionic.Platform.exitApp();
+            }
+          })
+        } 
     }
 });
