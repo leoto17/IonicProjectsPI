@@ -87,6 +87,8 @@ udeapp.controller("LoginCtrl", function($scope, $ionicHistory, $location) {
 	$scope.login=function(params){
         if(params.username=='root' && params.password=='root'){
             localStorage.setItem('logued','true');
+            $("input#user-field-pi").val("");
+            $("input#pass-field-pi").val("");
             $location.url("/main");
         }
         else{

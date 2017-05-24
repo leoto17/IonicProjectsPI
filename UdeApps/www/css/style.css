@@ -107,12 +107,12 @@ div#credits-pi{
 
 /*Settings for template starter*/
 .button-green-udea{
-    background-color: #0A351C;
+    background-color: #6C9A06;
     color:white;
 }
 
 .button-green-udea:hover, .button-green-udea:focus, .button-green-udea:active{
-    background-color: #6C9A06;
+    background-color: #0A351C;
     color: white;
 }
 
