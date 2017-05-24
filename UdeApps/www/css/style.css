@@ -31,6 +31,12 @@ img.navbar-icon{
     background-color: #0A351C;
 }
 
+.popup-buttons .button {
+    background-color: #6C9A06;
+    color: white;
+    font-weight: bold;
+}
+
 /*Settings for template notifications*/
 h3.error-not-notifications{
     color: #bd1313;

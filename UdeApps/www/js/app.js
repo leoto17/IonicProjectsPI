@@ -127,6 +127,7 @@ udeapp.controller("MainCtrl", function($scope, $ionicHistory, $location, $timeou
 			console.log('No es posible registrar nof' + err);
 		}
 	);
+    $('div#notification-alert').html(localStorage.getItem('notViewNotificationsAmount'));
     $('.pane').css('background-color','white');
     $('font').css('color','white');
     $('#bar-title').slideDown(700);
