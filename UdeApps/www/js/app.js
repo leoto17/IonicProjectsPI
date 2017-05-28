@@ -222,7 +222,7 @@ udeapp.controller("NotificationsCtrl", function($scope, $location, $ionicHistory
         localStorage.clear();
         localStorage.clear();
         localStorage.setItem('counter','0');
-		localStorage.setItem('logued','true');
+		    localStorage.setItem('logued','true');
     }
     
     $scope.back = function(){
